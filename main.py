@@ -61,9 +61,9 @@ if st.button("問題を出してもらう"):
         problem = get_problem(client, grade)
         st.session_state["problem"] = problem
         st.session_state["answer"] = ""
-        st.write("下の文章を英語に訳してください。")
 
 if "problem" in st.session_state and st.session_state["problem"] != "":
+    st.write("下の文章を英語に訳してください。")
     st.write(st.session_state["problem"])
     answer = st.text_area("英語の回答", height=200, value=st.session_state["answer"])
     st.session_state["answer"] = answer
